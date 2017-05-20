@@ -27,8 +27,8 @@ public class SeleniumTestCases1 extends TestCase{
 System.out.println("init 1");
         DesiredCapabilities capability = DesiredCapabilities.chrome();
         ChromeOptions options = new ChromeOptions();
-        options.addExtensions(new File("//var/jenkins_home/workspace/build/chromedriver"));
-        capability.setCapability(ChromeOptions.CAPABILITY, options);
+        options.addExtensions(new File("/var/jenkins_home/workspace/build/chromedriver"));
+//        capability.setCapability(ChromeOptions.CAPABILITY, options);
 //        capability.setCapability("chrome.binary", "/var/jenkins_home/workspace/build/chromedriver");
         capability.setVersion("58");
         System.out.println("set capabilities 2");
