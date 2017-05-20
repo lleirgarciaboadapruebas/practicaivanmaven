@@ -26,7 +26,7 @@ public class SeleniumTestCases1 extends TestCase{
 System.out.println("init 1");
         DesiredCapabilities capability = DesiredCapabilities.chrome();
         capability.setCapability("chrome.binary", "/var/jenkins_home/workspace/build/chromedriver");
-        capability.setCapability("chrome.version", "52");
+        capability.setVersion("58");
         System.out.println("set capabilities 2");
         WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
         WebDriver driver2 = new ChromeDriver(capability);
