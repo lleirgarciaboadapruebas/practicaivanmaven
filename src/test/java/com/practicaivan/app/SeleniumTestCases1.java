@@ -25,9 +25,9 @@ public class SeleniumTestCases1 extends TestCase{
 //        o.setBinary("/var/jenkins_home/workspace/build/chromedriver");
 
         DesiredCapabilities capability = DesiredCapabilities.chrome();
-//        System.setProperty("webdriver.chrome.driver","/var/jenkins_home/workspace/build/chromedriver");
-        WebDriver drive2r = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
-        WebDriver driver = new ChromeDriver();
+        capability.setCapability("chrome.binary", "/var/jenkins_home/workspace/build/chromedriver");
+        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+        WebDriver driver2 = new ChromeDriver();
 
         driver.get("http://www.google.es");
 
