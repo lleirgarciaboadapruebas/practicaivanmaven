@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.TestNG;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.net.URL;
 
 
@@ -25,10 +26,13 @@ public class SeleniumTestCases1 extends TestCase{
 //        o.setBinary("/var/jenkins_home/workspace/build/chromedriver");
 System.out.println("init 1");
         DesiredCapabilities capability = DesiredCapabilities.chrome();
-        capability.setCapability("chrome.binary", "/var/jenkins_home/workspace/build/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        options.addExtensions(new File("//var/jenkins_home/workspace/build/chromedriver"));
+        capability.setCapability(ChromeOptions.CAPABILITY, options);
+//        capability.setCapability("chrome.binary", "/var/jenkins_home/workspace/build/chromedriver");
         capability.setVersion("58");
         System.out.println("set capabilities 2");
-        WebDriver driver3 = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+        WebDriver drive2 = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
         WebDriver driver = new ChromeDriver(capability);
 
         System.out.println("ini driver 3");
