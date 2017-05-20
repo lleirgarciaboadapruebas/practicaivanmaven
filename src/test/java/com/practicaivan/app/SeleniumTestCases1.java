@@ -1,34 +1,23 @@
 package com.practicaivan.app;
 
 
+import junit.framework.TestCase;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.TestNG;
 import org.testng.annotations.Test;
 
-/**
- * Created by lleir on 20/5/17.
- */
-public class SeleniumTestCases1 {
 
-//    public static void main(String[] args) {
-//
-//        WebDriver driver = new ChromeDriver();
-//
-//        driver.get("http://www.google.es");
-//
-//        System.out.println("Google abierto con exito. Selenium Test Case!");
-//
-//        try {
-//            Thread.sleep(5);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
-//        driver.quit();
-//    }
+@RunWith(JUnit4.class)
+public class SeleniumTestCases1 extends TestCase{
 
     @Test
     public void a() throws Exception {
+
+        System.setProperty("webdriver.chrome.driver","https://github.com/lleirgarciaboadapruebas/practicaivanmaven/blob/master/chromedriver");
+
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://www.google.es");
