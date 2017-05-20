@@ -16,7 +16,7 @@ public class SeleniumTestCases1 extends TestCase{
     @Test
     public void a() throws Exception {
 
-        System.setProperty("webdriver.chrome.driver","https://github.com/lleirgarciaboadapruebas/practicaivanmaven/blob/master/chromedriver");
+        System.setProperty("webdriver.chrome.driver","https://github.com/lleirgarciaboadapruebas/practicaivanmaven/blob/master/");
 
         WebDriver driver = new ChromeDriver();
 
