@@ -16,7 +16,7 @@ public class SeleniumTestCases1 extends TestCase{
     @Test
     public void a() throws Exception {
 
-        System.setProperty("webdriver.chrome.driver","/var/jenkins_home/workspace/build");
+        System.setProperty("webdriver.chrome.driver","/var/jenkins_home/workspace/build/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
