@@ -3,9 +3,9 @@ package com.practicaivan.app;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
+import org.testng.annotations.Test;
 
 
 @RunWith(JUnit4.class)
