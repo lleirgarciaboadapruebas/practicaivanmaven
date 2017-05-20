@@ -23,15 +23,18 @@ public class SeleniumTestCases1 extends TestCase{
 
 //        ChromeOptions o = new ChromeOptions();
 //        o.setBinary("/var/jenkins_home/workspace/build/chromedriver");
-
+System.out.println("init 1");
         DesiredCapabilities capability = DesiredCapabilities.chrome();
         capability.setCapability("chrome.binary", "/var/jenkins_home/workspace/build/chromedriver");
         capability.setVersion("52");
+        System.out.println("set capabilities 2");
         WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
         WebDriver driver2 = new ChromeDriver();
 
+        System.out.println("ini driver 3");
         driver.get("http://www.google.es");
 
+        System.out.println("webpage ok 4");
         System.out.println("Google abierto con exito. Selenium Test Case!");
 
         try {
