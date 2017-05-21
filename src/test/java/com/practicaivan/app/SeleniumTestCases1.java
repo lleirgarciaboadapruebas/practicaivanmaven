@@ -23,6 +23,7 @@ public class SeleniumTestCases1 extends TestCase{
     public void a() throws Exception {
 
 //        ChromeOptions o = new ChromeOptions();
+
 //        o.setBinary("/var/jenkins_home/workspace/build/chromedriver");
 System.out.println("init 1");
         DesiredCapabilities capability = DesiredCapabilities.chrome();
