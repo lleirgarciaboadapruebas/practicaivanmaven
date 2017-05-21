@@ -32,6 +32,7 @@ System.out.println("init 1");
         capability.setCapability("chrome.binary", "/var/jenkins_home/workspace/build/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/workspace/build/chromedriver");
 
+
         capability.setVersion("58");
         System.out.println("set capabilities 2");
         WebDriver drive2 = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
